@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp64"
+    android:background="@color/white"
+    android:gravity="center_vertical">
+
+    <!--营业范围-->
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_weight="1"
+        android:textColor="#232323"
+        android:textSize="@dimen/sp20"
+        tools:text="水果" />
+
+
+    <ImageView
+        android:id="@+id/img_checked"
+        android:layout_width="@dimen/dp35"
+        android:layout_height="@dimen/dp35"
+        android:scaleType="fitXY"
+        android:src="@mipmap/icon_bank_selected"
+        android:visibility="gone" />
+
+
+</LinearLayout>

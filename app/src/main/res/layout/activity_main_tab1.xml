@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/base_form">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/bg_tab1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            style="@style/form_title_layout"
+            android:background="@null">
+
+            <TextView
+                android:id="@+id/tv_form_title"
+                style="@style/form_title"
+                android:text="理财" />
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="@dimen/dp28"
+                android:layout_height="@dimen/dp28"
+                android:layout_marginStart="@dimen/dp13"
+                android:layout_marginTop="@dimen/dp35"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/icon_back"
+                android:visibility="gone" />
+
+            <!--收益明细-->
+            <Button
+                android:id="@+id/btn_detail"
+                android:layout_width="@dimen/dp70"
+                android:layout_height="@dimen/dp33"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp13"
+                android:layout_marginTop="@dimen/dp35"
+                android:background="@drawable/shape_btn_white_line"
+                android:gravity="center"
+                android:text="明细"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp18" />
+
+        </RelativeLayout>
+
+        <custom_view.progress_bar.CircleBar
+            android:id="@+id/myProgress"
+            android:layout_width="@dimen/dp160"
+            android:layout_height="@dimen/dp160"
+            android:layout_marginBottom="@dimen/dp75"
+            android:layout_marginTop="@dimen/dp33"
+            android:progress="90" />
+
+    </LinearLayout>
+
+    <!--top  end-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp224"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <!--第一部分-->
+                <LinearLayout style="@style/tab1_profit_item_layout">
+
+                    <TextView
+                        style="@style/tab1_profit_item_title"
+                        android:text="@string/tab1_profit_title1" />
+
+                    <TextView
+                        android:id="@+id/tv_total_price"
+                        style="@style/tab1_profit_item_content"
+                        android:text="@string/tab1_profit_value_default" />
+
+                </LinearLayout>
+
+                <!--第二部分-->
+                <LinearLayout style="@style/tab1_profit_item_layout">
+
+                    <TextView
+                        style="@style/tab1_profit_item_title"
+                        android:text="@string/tab1_profit_title2" />
+
+                    <TextView
+                        android:id="@+id/tv_day_total_price"
+                        style="@style/tab1_profit_item_content"
+                        android:text="@string/tab1_profit_value_default" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <!--第三部分-->
+                <LinearLayout style="@style/tab1_profit_item_layout">
+
+                    <TextView
+                        style="@style/tab1_profit_item_title"
+                        android:text="@string/tab1_profit_title3" />
+
+                    <TextView
+                        android:id="@+id/tv_balance"
+                        style="@style/tab1_profit_item_content"
+                        android:text="@string/tab1_profit_value_default" />
+
+
+                </LinearLayout>
+
+                <!--第四部分-->
+                <LinearLayout style="@style/tab1_profit_item_layout">
+
+                    <TextView
+                        style="@style/tab1_profit_item_title"
+                        android:text="@string/tab1_profit_title4" />
+
+                    <TextView
+                        android:id="@+id/tv_rate"
+                        style="@style/tab1_profit_item_content"
+                        android:text="@string/tab1_profit_value_default" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            style="@style/view_line"
+            android:layout_width="@dimen/dp68"
+            android:layout_centerInParent="true" />
+
+        <View
+            style="@style/view_line_vertical"
+            android:layout_height="@dimen/dp68"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <!--金额、利率显示 end-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/btn_recharge"
+            style="@style/tab1_button"
+            android:layout_marginEnd="@dimen/dp5"
+            android:layout_marginStart="@dimen/dp20"
+            android:background="@drawable/shape_btn_tab1_recharge"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:text="@string/recharge"
+            android:textColor="@color/white">
+
+            <ImageView
+                style="@style/tab3_menu_icon"
+                android:layout_width="@dimen/dp25"
+                android:src="@mipmap/icon_tab1_menu1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp5"
+                android:text="@string/tab3_menu_1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp20" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_withdraw"
+            style="@style/tab1_button"
+            android:layout_marginEnd="@dimen/dp20"
+            android:layout_marginStart="@dimen/dp5"
+            android:background="@drawable/shape_btn_tab1_withdraw"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:text="@string/withdraw"
+            android:textColor="@color/bg_btn_normal">
+
+            <ImageView
+                style="@style/tab3_menu_icon"
+                android:layout_width="@dimen/dp25"
+                android:src="@mipmap/icon_tab1_menu2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp5"
+                android:text="生成付款二维码"
+                android:textColor="@color/btn_normal"
+                android:textSize="@dimen/sp20" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--充值、提现end-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal|bottom"
+        android:paddingBottom="@dimen/dp20">
+
+        <ImageView
+            android:layout_width="@dimen/dp20"
+            android:layout_height="@dimen/dp20"
+            android:src="@mipmap/icon_tab1_1" />
+
+        <TextView
+            style="@style/tab1_profit_item_title"
+            android:layout_marginStart="@dimen/dp13"
+            android:text="@string/tab1_profit_bottom" />
+    </LinearLayout>
+
+</LinearLayout>

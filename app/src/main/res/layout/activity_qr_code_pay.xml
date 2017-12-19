@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/base_form"
+    android:background="@mipmap/bg_qr_code_pay"
+    android:gravity="center_horizontal">
+
+    <!--充值、提现操作提示-->
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp80">
+
+            <TextView
+                android:id="@+id/tv_form_title"
+                style="@style/form_title" />
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="@dimen/dp50"
+                android:layout_height="@dimen/dp50"
+                android:layout_marginTop="@dimen/dp25"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/dp10"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/icon_back" />
+
+            <TextView
+                android:id="@+id/tv_menu"
+                style="@style/form_select_text"
+                android:layout_marginTop="@dimen/dp25"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="@dimen/dp145"
+        android:layout_height="@dimen/dp40"
+        android:layout_marginTop="@dimen/dp20"
+        android:src="@mipmap/icon_pay_text_title" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:background="@mipmap/bg_qr_code"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <custom_view.qrcode.CanvasRQ
+            android:id="@+id/img_qr_code"
+            android:layout_width="@dimen/dp320"
+            android:layout_height="@dimen/dp320"
+            android:scaleType="fitXY"
+            app:iconHeight="@dimen/dp30"
+            app:iconWidth="@dimen/dp30"
+            app:qrCodeHeight="@dimen/dp290"
+            app:qrCodeWidth="@dimen/dp290"
+            app:url="@string/official_website" />
+
+        <View style="@style/view_line_short" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dp20"
+                android:text="收款金额： "
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/sp20" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/text_money"
+                android:textSize="@dimen/sp22"
+                tools:text="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp30"
+            android:layout_marginTop="@dimen/dp10"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dp20"
+                android:text="收款备注： "
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/sp18" />
+
+            <TextView
+                android:id="@+id/tv_remark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/sp18"
+                tools:text="支付商品金额" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp20"
+        android:text="@string/slogan"
+        android:textColor="#fcfafd"
+        android:textSize="@dimen/sp24" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp20"
+        android:src="@mipmap/icon_logo2" />
+
+
+</LinearLayout>

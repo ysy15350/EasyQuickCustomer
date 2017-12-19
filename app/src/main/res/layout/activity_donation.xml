@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/base_form">
+
+    <!--充值-->
+
+    <include layout="@layout/form_head" />
+
+
+    <!-- 顶部Banner部分 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_banner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp200"
+        android:background="@color/white">
+
+        <custom_view.SlideShowViewAuto
+            android:id="@+id/slideshowView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <!-- 顶部Banner部分end -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:gravity="center"
+        android:text="关于我们"
+        android:textColor="#222222"
+        android:textSize="@dimen/sp24" />
+
+
+    <!--<custom_view.qrcode.CanvasRQ-->
+    <!--android:id="@+id/img_qr_code"-->
+    <!--android:layout_width="@dimen/dp200"-->
+    <!--android:layout_height="@dimen/dp200"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:layout_marginTop="@dimen/dp20"-->
+    <!--android:scaleType="fitXY"-->
+    <!--app:iconHeight="@dimen/dp30"-->
+    <!--app:iconWidth="@dimen/dp30"-->
+    <!--app:qrCodeHeight="@dimen/dp200"-->
+    <!--app:qrCodeWidth="@dimen/dp200"-->
+    <!--app:url="@string/official_website" />-->
+
+    <ImageView
+        android:id="@+id/img_qr_code"
+        android:layout_width="@dimen/dp200"
+        android:layout_height="@dimen/dp200"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp20"
+        android:scaleType="fitXY" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp20"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp30"
+        android:background="@drawable/shape_dialog"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp70">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dp20"
+                android:gravity="center"
+                android:text="￥"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/sp22" />
+
+            <EditText
+                android:id="@+id/et_price"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="请输入捐款金额"
+                android:inputType="number"
+                android:textColor="#222222"
+                android:textColorHint="@color/text_hint"
+                android:textSize="@dimen/sp20" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_ok"
+        style="@style/btn_ok"
+        android:layout_marginBottom="@dimen/dp13"
+        android:layout_marginEnd="@dimen/dp20"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp20"
+        android:text="@string/donation_ok" />
+
+
+</LinearLayout>

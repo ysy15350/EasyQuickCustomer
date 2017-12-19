@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/base_form">
+
+    <!--余额-->
+
+    <include layout="@layout/form_head" />
+
+
+    <ImageView
+        android:layout_width="@dimen/dp132"
+        android:layout_height="@dimen/dp132"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp53"
+        android:src="@mipmap/icon_balance" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp24"
+        android:text="我的余额"
+        android:textColor="#222222"
+        android:textSize="@dimen/sp20" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp13"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="bottom"
+            android:text="￥"
+            android:textColor="#222222"
+            android:textSize="@dimen/sp25" />
+
+        <TextView
+            android:id="@+id/tv_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/tab1_profit_value_default"
+            android:textColor="#222222"
+            android:textSize="@dimen/sp32" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_recharge"
+        style="@style/btn_ok"
+        android:layout_marginEnd="@dimen/dp20"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp53"
+        android:text="@string/recharge" />
+
+
+    <Button
+        android:id="@+id/btn_withdraw"
+        style="@style/btn_ok"
+        android:layout_marginEnd="@dimen/dp20"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp20"
+        android:background="@drawable/shape_btn_getcode"
+        android:text="@string/withdraw"
+        android:textColor="@color/btn_normal" />
+
+    <Button
+        android:id="@+id/btn_donation"
+        style="@style/btn_ok"
+        android:layout_marginEnd="@dimen/dp20"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp20"
+        android:background="@drawable/shape_btn_donation"
+        android:text="@string/donation"
+        android:textColor="@color/btn_normal"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal|bottom"
+        android:paddingBottom="@dimen/dp150">
+
+        <ImageView
+            android:layout_width="@dimen/dp20"
+            android:layout_height="@dimen/dp20"
+            android:src="@mipmap/icon_tab1_1" />
+
+        <TextView
+            style="@style/tab1_profit_item_title"
+            android:layout_marginStart="@dimen/dp13"
+            android:text="@string/tab1_profit_bottom" />
+    </LinearLayout>
+
+</LinearLayout>

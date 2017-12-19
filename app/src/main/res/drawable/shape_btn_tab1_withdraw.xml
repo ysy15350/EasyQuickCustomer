@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 首页1提现按钮-->
+
+    <corners android:radius="@dimen/dp48" />
+
+    <stroke
+        android:width="@dimen/dp2"
+        android:color="@color/btn_normal" />
+
+    <solid android:color="@color/white" />
+
+</shape>
